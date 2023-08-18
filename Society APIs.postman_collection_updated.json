@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "23928151-3c64-4494-8446-2e093e193abc",
+		"name": "Society APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "733027"
+	},
+	"item": [
+		{
+			"name": "GET Vote results for Position",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"position\" : \"head\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/election/position/results",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"election",
+						"position",
+						"results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create new voting position with candidates",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"position\": \"head\",\r\n    \"electionStarteDate\": \"2023-08-16\",\r\n    \"candidates\": [\r\n        {\r\n            \"candidateName\": \"keshav\"\r\n        },\r\n        {\r\n            \"candidateName\": \"rohit\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/election/position/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"election",
+						"position",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create new vote record for position",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"position\": \"head\",\r\n    \"key\" : \"UKh8Dw\",\r\n    \"candidateName\" : \"rohit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/election/position/cast-vote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"election",
+						"position",
+						"cast-vote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update existing voting position with candidates",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"position\": \"head\",\r\n    \"electionStarteDate\": \"2023-08-17\",\r\n    \"candidates\": [\r\n        {\r\n            \"candidateName\": \"keshavUpdated\"\r\n        },\r\n        {\r\n            \"candidateName\": \"rohitUpdated\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/election/position/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"election",
+						"position",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE existing voting position with candidates details",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"position\" : \"head\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/election/position/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"election",
+						"position",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET existing voting position with candidates details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/election/position/head/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"election",
+						"position",
+						"head",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/app/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"app",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
